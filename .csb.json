@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "zustand": "latest"
   }
 }
