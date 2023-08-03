@@ -1,0 +1,22 @@
+{
+  "openFiles": [
+    "src/App.tsx",
+    "src/index.css",
+    "src/components/card.tsx",
+    "src/components/column.tsx",
+    "src/components/droparea.tsx",
+    "src/utils.ts",
+    "src/board-store.ts",
+    "src/data.ts"
+  ],
+  "otherFiles": ["tailwind.config.js"],
+  "activeFile": "src/App.tsx",
+  "template": "vite-react-ts",
+  "options": {
+    "tailwind": true
+  },
+  "dependencies": {
+    "react": "latest",
+    "react-dom": "latest"
+  }
+}
