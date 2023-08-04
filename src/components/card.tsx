@@ -9,7 +9,12 @@ export const Card = ({ title, id, users, tags }: CardProps) => {
   return (
     <div
       draggable="true"
-      onDragStart={() => setDraggingCard(id)}
+      onDragStart={(ev) => {
+        setDraggingCard(id);
+        // This enables the dragging functionality on iOS too.
+        // See this great tweet by Adam Argyle: https://twitter.com/argyleink/status/1687160975374626816
+        ev.dataTransfer.setData("text/html", ev.currentTarget.outerHTML);
+      }}
       onDragEnd={() => setDraggingCard(null)}
       style={{ viewTransitionName: `card-${id}` }}
       className="cursor-grab rounded-md bg-gray-900 p-3 shadow-md active:animate-pulse active:cursor-grabbing"

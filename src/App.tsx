@@ -30,11 +30,16 @@ function App() {
       index,
     });
 
-    document.startViewTransition(() => {
-      flushSync(() => {
-        setCards(newCards);
+    if (document.startViewTransition) {
+      document.startViewTransition(() => {
+        flushSync(() => {
+          setCards(newCards);
+        });
       });
-    });
+      // If view transitions aren't supported (e.g. mobile safari), we just update the state.
+    } else {
+      setCards(newCards);
+    }
   };
 
   return (
