@@ -17,8 +17,8 @@
     "tailwind": true
   },
   "dependencies": {
-    "react": "latest",
-    "react-dom": "latest",
+    "react": "18",
+    "react-dom": "18",
     "zustand": "latest",
     "classnames": "latest"
   }
